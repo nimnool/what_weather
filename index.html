@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Weather_app</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header-wrap">
+            <a href="/" class="header-logo">
+                <img src="images/weather-logo.png" alt="logo">
+            </a>
+            <ul class="lang-switch">
+                <li><a href="#">UA</a></li>
+                <li><a href="#">EN</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="forecast-wrap">
+        <div class="container">
+            <div class="forecast-wrap">
+                <ul class="forecast-links">
+                    <li>Main</li>
+                    <li>Favourites</li>
+                </ul>
+                <div class="forecast-content">
+                    <div class="forecast-item-holder">
+                        <div class="city-search-wrap">
+                            <form action="#">
+                                <input type="text" id="city-input" placeholder="City name" autocomplete="on">
+                                <button class="btn" type="submit" id="get-weather-btn">&#9740</button>
+                            </form>
+                            <div class="button-holder">
+                                <button class="btn">To favourites</button>
+                            </div>
+                        </div>
+                        <div class="loader">
+                            <div class="loader-icon"></div>
+                        </div>
+                        <div class="forecast-holder">
+                            <div class="btn-wrap">
+                                <button class="btn" id="one-day">Today</button>
+                                <button class="btn" id="add-more">For 5 days</button>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="city-holder">
+                                    <span class="city"></span>
+                                </div>
+                                <div class="weather-icon"></div>
+                                <div class="weather-info">
+                                    <span class="date"></span>
+                                    <span class="temp"></span>
+                                    <span class="wind"></span>
+                                    <span class="humid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="error-message">
+                            <h2>Error receiving geolocation!</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
